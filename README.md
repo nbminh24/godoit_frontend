@@ -2,7 +2,7 @@
 
 🚀 **Live Demo:** [https://godoit.vercel.app/](https://godoit.vercel.app/) 🚀
 
-Đây là một ứng dụng web hiện đại dùng để quản lý danh sách công việc (To-Do List). Giao diện được thiết kế theo phong cách tối giản, trực quan và tích hợp đầy đủ các tính năng CRUD (Tạo, Đọc, Cập nhật, Xóa) với backend API được xây dựng bằng Golang. Dự án này được phát triển như một phần của bài kiểm tra kỹ năng cho vị trí Intern Developer.
+Đây là một ứng dụng web hiện đại dùng để quản lý danh sách công việc (To-Do List). Giao diện được thiết kế theo phong cách tối giản, trực quan với backend API được xây dựng bằng Golang. Dự án này được phát triển như một phần của bài kiểm tra kỹ năng cho vị trí Intern Developer.
 
 ## Các tính năng chính
 
