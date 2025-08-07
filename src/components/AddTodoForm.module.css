@@ -1,0 +1,56 @@
+.form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 8px 0 0 8px;
+  background-color: #252525;
+  color: #ffffff;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #FF8C00;
+}
+
+.button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: #FF8C00; /* Chilley Orange */
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #e07b00; /* Darker orange on hover */
+}
+
+.button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .input {
+    border-radius: 8px;
+    margin-bottom: 10px; /* Add space between input and button */
+  }
+
+  .button {
+    border-radius: 8px;
+  }
+}
