@@ -1,63 +1,69 @@
-# Godoit - To-Do List Application
+# Godoit - Ứng dụng Quản lý Công việc
 
-A modern, responsive To-Do List application built with ReactJS. This project was developed as part of an intern test, focusing on clean code, modern UI/UX, and seamless integration with a backend API.
+🚀 **Live Demo:** [https://godoit.vercel.app/](https://godoit.vercel.app/) 🚀
 
-## Backend API
+Đây là một ứng dụng web hiện đại dùng để quản lý danh sách công việc (To-Do List). Giao diện được thiết kế theo phong cách tối giản, trực quan và tích hợp đầy đủ các tính năng CRUD (Tạo, Đọc, Cập nhật, Xóa) với backend API được xây dựng bằng Golang. Dự án này được phát triển như một phần của bài kiểm tra kỹ năng cho vị trí Intern Developer.
 
-The frontend application connects to a live backend service hosted on Render.
+## Các tính năng chính
 
-- **API Endpoint:** `https://godoit-backend.onrender.com`
+- **Quản lý công việc toàn diện (CRUD):**
+    - **Thêm công việc:** Form nhập liệu cho phép người dùng nhanh chóng thêm công việc mới.
+    - **Hiển thị danh sách:** Tất cả công việc được hiển thị rõ ràng trên giao diện chính.
+    - **Cập nhật trạng thái:** Dễ dàng đánh dấu một công việc là đã hoàn thành hoặc chưa hoàn thành chỉ với một cú nhấp chuột.
+    - **Xóa công việc:** Xóa các công việc không còn cần thiết.
+- **Giao diện hiện đại và tương thích:**
+    - **Thiết kế Responsive:** Giao diện tự động điều chỉnh để mang lại trải nghiệm tốt nhất trên cả máy tính và thiết bị di động.
+    - **Dark Mode:** Giao diện tối giúp giảm mỏi mắt và tạo cảm giác hiện đại.
+- **Trải nghiệm người dùng nâng cao (UX):**
+    - **Thông báo tức thì (Toast Notification):** Phản hồi ngay lập tức cho người dùng sau mỗi hành động (thêm, xóa, cập nhật thành công hoặc khi có lỗi).
+    - **Trạng thái tải (Loading State):** Hiển thị spinner trong khi chờ tải dữ liệu từ backend, giúp người dùng biết hệ thống đang xử lý.
+    - **Xử lý trạng thái rỗng:** Hiển thị thông báo thân thiện khi không có công việc nào trong danh sách.
+    - **Xác thực đầu vào (Validation):** Ngăn người dùng thêm công việc trống và hiển thị cảnh báo.
 
-## Features
+## Công nghệ và Công cụ
 
-- **Full CRUD Functionality:**
-    - **Create:** Add new tasks.
-    - **Read:** View the list of all tasks.
-    - **Update:** Mark tasks as completed or uncompleted.
-    - **Delete:** Remove tasks from the list.
-- **Modern & Responsive UI:**
-    - Dark theme with a minimalist, card-based design.
-    - Fully responsive layout that works seamlessly on both desktop and mobile devices.
-- **Enhanced User Experience (UX):**
-    - **Toast Notifications:** Instant feedback for all user actions (add, update, delete, error) using `react-toastify`.
-    - **Loading State:** A loading spinner is displayed while fetching initial data.
-    - **Empty State:** A friendly message is shown when there are no tasks to display.
-    - **Input Validation:** Prevents users from submitting empty tasks and provides a warning.
-    - **Disabled State:** The "Add Task" button is disabled during the API request to prevent duplicate submissions.
+- **Framework:** ReactJS - Thư viện JavaScript phổ biến để xây dựng giao diện người dùng.
+- **HTTP Client:** Axios - Được sử dụng để thực hiện các yêu cầu API đến backend một cách hiệu quả.
+- **Styling:** CSS Modules - Giúp đóng gói CSS theo từng component, tránh xung đột và dễ dàng quản lý.
+- **Notifications:** React Toastify - Thư viện chuyên dụng để tạo các thông báo toast đẹp mắt và linh hoạt.
+- **Package Manager:** NPM - Trình quản lý gói mặc định của Node.js.
+- **Linter:** ESLint - Được cấu hình để đảm bảo code luôn sạch sẽ, dễ đọc và nhất quán.
+- **Backend:** Kết nối với API ngoài được xây dựng bằng Golang (Gin Framework) và deploy trên Render.
 
-## Tech Stack
+## Hướng dẫn sử dụng
 
-- **ReactJS:** Core library for building the user interface.
-- **Axios:** For making HTTP requests to the backend API.
-- **React Toastify:** For displaying toast notifications.
-- **CSS Modules:** For locally-scoped and component-based styling.
+### Cài đặt và Chạy dự án local
 
-## Getting Started
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/nbminh24/godoit_frontend.git
+    cd godoit_frontend
+    ```
 
-To get a local copy up and running, follow these simple steps.
+2.  **Cấu hình biến môi trường:**
+    Sao chép tệp `.env.example` để tạo tệp `.env.local` mới và điền URL của backend API.
+    ```sh
+    cp .env.example .env.local
+    ```
 
-### Prerequisites
+    Nội dung tệp `.env.local`:
+    ```
+    REACT_APP_API_URL=https://godoit-backend.onrender.com
+    ```
 
-- Node.js (v14 or later)
-- npm
+3.  **Install dependencies:**
+    ```sh
+    npm install
+    ```
 
-### Installation & Running
+4.  **Run the development server:**
+    Ứng dụng sẽ có sẵn tại `http://localhost:3000`.
+    ```sh
+    npm start
+    ```
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/nbminh24/godoit_frontend.git
-   ```
-2. Navigate to the project directory
-   ```sh
-   cd godoit
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Run the app in development mode
-   ```sh
-   npm start
-   ```
+### Truy cập phiên bản đã deploy
 
-The application will be available at `http://localhost:3000`.
+Dự án đã được build và deploy lên Vercel. Bạn có thể truy cập và trải nghiệm phiên bản live của ứng dụng tại địa chỉ:
+
+[https://godoit.vercel.app/](https://godoit.vercel.app/)
