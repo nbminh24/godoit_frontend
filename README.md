@@ -27,7 +27,6 @@
 - **Styling:** CSS Modules - Giúp đóng gói CSS theo từng component, tránh xung đột và dễ dàng quản lý.
 - **Notifications:** React Toastify - Thư viện chuyên dụng để tạo các thông báo toast đẹp mắt và linh hoạt.
 - **Package Manager:** NPM - Trình quản lý gói mặc định của Node.js.
-- **Linter:** ESLint - Được cấu hình để đảm bảo code luôn sạch sẽ, dễ đọc và nhất quán.
 - **Backend:** Kết nối với API ngoài được xây dựng bằng Golang (Gin Framework) và deploy trên Render.
 
 ## Hướng dẫn sử dụng
